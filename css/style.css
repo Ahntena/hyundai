@@ -1,0 +1,126 @@
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+* {margin: 0;padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+img {vertical-align: top;}
+
+body {font-family: 'Nanum Gothic'; font-size: 14px;}
+.wrap {width: 1200px; margin: 0 auto; position: relative;}
+.wrap::after, ul::after, .cl::after {content: ""; clear: both; display: block;}
+.blind {position: absolute; width: 0; height: 0; font-size: 0; overflow: hidden; left: -999999px;}
+
+/* index */
+header {height: 70px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); position: fixed; z-index: 99; background: #fff;width: 100%;} /* 동생이 위로 올라오기때문에 z-index로 띄워줌 */
+/* header .wrap {background: #cdd;} */
+
+header h1 {padding-top: 15px;}
+header h1 a img {height: 40px;}
+
+header .gnb {float: left; position: absolute; left: 240px; top: 27px;}
+header .gnb li {float: left; font-size: 16px; font-weight: bold; margin-right: 100px;}
+
+header .snb {position: absolute; right: 0;top: 28px;}
+header .snb li {float: left; font-size: 12px; color: #666;}
+header .snb li::after {content: "|"; margin: 0 6px;}
+header .snb li:last-child::after {display: none;}
+
+.blank {height: 70px;} /* 헤더의 높이만큼 */
+
+#main { background: #f3f2f0;}
+#main .slide { background: #ffe0a3;}
+#main .slide article {position: absolute; left: 60px; top: 50px; color: #fff;}
+#main .slide article h3 {font-size: 30px; font-weight: 900;}
+#main .slide article p {font-size: 16px; line-height: 1.6; margin-top: 20px;}
+#main .slide article a {width: 190px; line-height: 40px; text-align: center; border: 1px solid #fff; margin-top: 40px; display: block; transition: 0.3s;}
+#main .slide article a:hover {background: #fff; color: #000;}
+#main .slide article a i {position: relative; top: 1px; margin-left: 10px;}
+
+#main .slide ul {display: flex; justify-content: center; position: absolute; left: 0;bottom: 30px; width: 100%;}
+#main .slide ul li {margin: 0 5px;}
+#main .slide ul li a {display: block; width: 12px;height: 12px; background: #fff; border-radius: 12px; text-indent: 30px; overflow: hidden;} /* text-indent : 글자 들여쓰기 */
+#main .slide ul li.select a {background: #000;}
+
+#main .slide > a {position: absolute; top: calc(50% - 12px);} /* 유동적으로, 50%위치로 이동 후 요소 크기의 1/2만큼 빼기*/
+#main .slide .prev { left: -30px;}
+#main .slide .next { right: -30px;}
+
+#main .go {margin-top: 40px;}
+#main .go ul li {float: left; width: 299px; margin-right: 1px;}
+#main .go ul li:last-child {width: 300px; margin-right: 0px;}
+#main .go ul li a {padding-left: 40px; line-height: 100px; font-size: 18px; font-weight: 900; display: block;
+    background-color: #fff; background-repeat: no-repeat; background-position: right 30px center;}
+#main .go ul li:nth-child(1) a {background-image:url(../images/icon1.png);}
+#main .go ul li:nth-child(2) a {background-image: url(../images/icon2.png);}
+#main .go ul li:nth-child(3) a {background-image: url(../images/icon3.png);}
+#main .go ul li:nth-child(4) a {background-image: url(../images/icon4.png);}
+
+/* #main .go a {background: #fff; display: flex; float: left; width: 299px; height: 100px; margin-right: 1px; align-items: center; justify-content: space-between; padding: 0 30px 0 40px; box-sizing: border-box; font-size: 18px; font-weight: 900;}
+#main .go a:last-child {width: 300px; margin-right: 0;} */
+
+#bnr {background: #e9e5e4; padding: 40px 0;}
+#bnr .wrap {background: #ffc;}
+#bnr ul {background: #fcc;}
+#bnr ul li {float: left; width: 400px;}
+#bnr ul li a p {background: #fff; font-weight: bold; padding: 10px 20px 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height: 50px; box-sizing: border-box;}
+#bnr .wrap > a {position: absolute; top: calc(50% - 37px);}
+#bnr .wrap > .prev {left: -30px;}
+#bnr .wrap > .next {right: -30px;}
+
+#dp {background: #f2efec; padding-top: 80px;}
+#dp article {width: 400px; float: left; padding: 50px 0 0 30px; box-sizing: border-box;}
+#dp article h3 {font-size: 36px; font-weight: 900; line-height: 1.2;}
+#dp article p {font-size: 16px; margin-top: 30px; line-height: 1.4;}
+#dp article a {margin-top: 30px; border: 1px solid #000; line-height: 40px; padding: 0 40px; display: inline-block; transition: 0.3s;}
+#dp article a:hover, #dp article a:focus {color: #fff; background: #000;}
+#dp article a > i {position: relative; top: 1px; margin-left: 10px;}
+#dp .wrap > img {width: 800px; float: left;}
+#dp ul {position: absolute; bottom: 20px; left: 0; width: 100%; display: flex; justify-content: center;}
+#dp ul li { margin: 0 5px;}
+#dp ul li a {width: 12px; height: 12px; border-radius: 12px; background: #fff; display: block; text-indent: -20px; overflow: hidden;}
+#dp ul li.select a {background: #000;}
+
+#dp .wrap > a {position: absolute; top: calc(50% - 12px);}
+#dp .wrap > .prev {left: -30px;}
+#dp .wrap > .next {right: -30px;}
+
+#center {background: #e9e5e4;}
+#center h2 {font-weight: 900; font-size: 30px; line-height: 120px;}
+#center ul li {float: left; width: 300px; background: #ccf;}
+#center ul li a {height: 300px; font-weight: bold; font-size: 16px; color: #fff; display: flex; justify-content: center; align-items: center; text-align: center; line-height: 1.4;}
+    /* = display: block;  padding-top: 130px; box-sizing: border-box; text-align: center; */
+#center ul li:nth-child(1) a {background: url(../images/main_drv1.jpg) no-repeat center;}
+#center ul li:nth-child(2) a {background: url(../images/main_drv2.jpg) no-repeat center;;}
+#center ul li:nth-child(3) a {background: url(../images/main_drv3.jpg) no-repeat center;;}
+#center ul li:nth-child(4) a {background: url(../images/main_drv4.jpg) no-repeat center;;}
+/* 중복된 것 없는지 확인, 특정도 점수 차이로 취소된 것 없는지 확인*/
+
+#loc {padding: 80px 0 20px;}
+#loc ul li {float: left; width: 380px; margin-right: 30px;}
+#loc ul li:last-child {margin-right: 0;}
+#loc ul li a p {line-height: 60px; font-weight: bold; padding: 0 6px;}
+#loc .wrap > a {position: absolute; width: 46px; height: 46px; background: rgba(255, 255, 255, 0.8); top: calc(50% - 53px); display: flex; align-items: center; justify-content: center;}
+#loc .wrap > a img {height: 16px;}
+#loc .prev {left: 0;}
+#loc .next {right: 0;}
+
+footer {background: #252525; color: #bbb; padding-top: 50px;}
+footer .info .link li {float: left;}
+footer .info .link li::after {content: "|"; margin: 0 16px; font-size: 12px; position: relative; top: 1px;}
+footer .info .link li:last-child::after {display: none;}
+footer .info .link li a i {font-style: normal; font-size: 8px; margin-left: 6px; position: relative; top: -1px;}
+
+footer address {font-style: normal; line-height: 2; margin-top: 16px; font-size: 12px;}
+footer address span {margin-right: 30px;}
+footer address span:last-child {margin-right: 0px; display: block;}
+/*span은 inline요소이나 마지막span만 block으로 바꿔서 줄을 떨어뜨림*/
+
+footer .sns {background: #1d1; position: absolute; right: 0;bottom: 6px;}
+footer .sns li {float: left; margin-left: 20px;}
+footer .sns li a img {height: 20px;}
+
+footer .bg {background: #1c1b1b; margin-top: 40px;}
+footer .bg .wrap {height: 60px; display: flex; justify-content: space-between; align-items: center;}
+footer .bg .wrap::after {display: none;} /* 위에서 .wrap에 미리 ::after를 걸었던 것이 여기선 필요없으므로 해제 */
+footer .bg img {height: 20px;}
+footer .bg p {font-size: 12px;}
