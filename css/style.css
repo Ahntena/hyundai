@@ -115,7 +115,7 @@ footer address span {margin-right: 30px;}
 footer address span:last-child {margin-right: 0px; display: block;}
 /*span은 inline요소이나 마지막span만 block으로 바꿔서 줄을 떨어뜨림*/
 
-footer .sns {background: #1d1; position: absolute; right: 0;bottom: 6px;}
+footer .sns {position: absolute; right: 0;bottom: 6px;}
 footer .sns li {float: left; margin-left: 20px;}
 footer .sns li a img {height: 20px;}
 
